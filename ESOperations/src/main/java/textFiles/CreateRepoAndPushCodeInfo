@@ -1,0 +1,37 @@
+*****************************FIRST_STEP*********************************************************
+1.first create repository of same name as that of project which(project) u want to push 
+  1st time
+  [
+  	how to create new repo in github?
+  	1.click on accout photo on right side
+  	2.then click on Your repositories
+  	3.then click on New
+  	4.enter name of repository same as that of 
+  		project name(we may enter diff name but 
+  		for our convinience we enter same name as that of project name )
+  	5.then click on Create repository
+	  our repo. is created. then copy the path or link of repo, it is
+	  similar like {https://github.com/prakashgaikwad19/NewRepo.git}
+
+  ] 
+*****************************SECOND_STEP******************************************************* 
+2. Then come to eclipse and search for clone repository in Quick Access
+    click on Clone Git a Repository
+*****************************THIRD_STEP********************************************************
+3. Then window will pop up and all info get auto-fill if not then paste 
+   copied link when repo created in github
+*****************************FOURTH_STEP*******************************************************
+4. Then Next>Next>Finish
+   {
+    our repo is copied/cloned to local system(ie. on our PC)
+    we can also see path of our cloned repo in while we are in Finish window  
+   }
+*****************************FIFTH_STEP********************************************************
+ 5.Now we can commit the code then push to repo
+*****************************SIXTH_STEP******************************************************** 
+ 6.Once we come to step 5 , after that whenever we write some code then we have to do 
+   only committ and push
+   while pushing code eclipse ask for user and password
+   user- our github accout user name
+   password - git token created
+***********************************************************************************************
