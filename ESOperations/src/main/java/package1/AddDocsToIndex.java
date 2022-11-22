@@ -24,6 +24,7 @@ public class AddDocsToIndex {
 		String[] age= {"23","23","23","23","23","24","24"};
 		String[] empName= {"emp1","emp2","emp3","emp4","emp5","emp6","emp7"};
 		String[] JoiningLocation= {"Mumbai","Mumbai","Delhi","Delhi","Indore","Banglure","Chennai"};
+		String[] CurrentLocation = {"Mumbai","Mumbai","Delhi","Delhi","Indore","Banglure","Chennai"};
 		Date[] JoiningDate= {new Date(2021, 10, 28),new Date(2021, 10, 28),
 								new Date(2021, 10, 28),new Date(2021, 10, 28),
 								new Date(2022, 3, 28),new Date(2022, 3, 28),
@@ -38,6 +39,7 @@ public class AddDocsToIndex {
 			map.put("empName", empName[i]);
 			map.put("age", age[i]);
 			map.put("JoiningLocation", JoiningLocation[i]);
+			map.put("CurrentLocation", CurrentLocation[i]);
 			map.put("JoiningDate", JoiningDate[i]);
 			
 			indexRequest

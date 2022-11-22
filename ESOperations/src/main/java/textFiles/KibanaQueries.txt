@@ -1,0 +1,35 @@
+Fetch 1st doc from matchQuery response(Result)
+
+GET employee_data/_search
+{ "from": 0,
+   "size": 1, 
+  "query": {
+    "match": {
+      "JoiningLocation": "mumbai"
+    }
+  }
+}
+======================================================
+get only those docs from index which contains particular field
+
+GET employee_data/_search
+{
+  "query": {
+    "exists": {
+      "field": "JoiningLocation"
+    }
+  }
+}
+======================================================
+apply wildcard query for JoiningLocation
+
+GET employee_data/_search
+{
+  "query": {
+    "wildcard": {
+      "JoiningLocation": {
+        "value": "*l*"
+      }
+    }
+  }
+}
