@@ -15,7 +15,7 @@ public class CheckIndexExist {
 		RestHighLevelClient client=new RestHighLevelClient(
 				RestClient.builder(new HttpHost("localhost", 9200, "http")));
 		GetIndexRequest getIndexRequest=new GetIndexRequest();
-		getIndexRequest.indices(/*"employee_data"*/"admin");
+		getIndexRequest.indices("employee_data"/*"admin"*/);
 		
 		boolean getIndexResponse;
 		try {
