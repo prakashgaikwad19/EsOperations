@@ -1,4 +1,4 @@
-package textFiles;
+package projectGuide;
 
 public class HowProjectCreated {
 /*

@@ -1,22 +1,26 @@
-package package1;
+package esOps;
 
 import java.io.IOException;
 
 import org.apache.http.HttpHost;
+import org.elasticsearch.action.admin.indices.open.OpenIndexRequest;
+import org.elasticsearch.action.admin.indices.open.OpenIndexResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
-import org.elasticsearch.client.indices.GetIndexRequest;
 
-public class IndexExistOrNot {
+@SuppressWarnings("deprecation")
+public class OpenIndex {
 
 	public static void main(String[] args) {
 		RestHighLevelClient client=new RestHighLevelClient(
 				RestClient.builder(new HttpHost("localhost", 9200, "http")));
-		GetIndexRequest getIndexRequest=new GetIndexRequest("employee_data");
+		OpenIndexRequest openIndexRequest=new OpenIndexRequest("employee_data");
+		
+		OpenIndexResponse openIndexResponse;
 		try {
-			boolean exist=client.indices().exists(getIndexRequest, RequestOptions.DEFAULT);
-			System.out.println(exist+"created or not");
+			openIndexResponse=client.indices().open(openIndexRequest, RequestOptions.DEFAULT);
+			System.out.println("Index opened or not"+openIndexResponse.isAcknowledged());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -26,6 +30,7 @@ public class IndexExistOrNot {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 }
